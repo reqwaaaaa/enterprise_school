@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.practice.mapper.TScoreMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.practice.entity.TScore">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="exam_id" property="examId" />
+        <result column="score" property="score" />
+        <result column="pass_status" property="passStatus" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, exam_id, score, pass_status, create_time
+    </sql>
+
+</mapper>
