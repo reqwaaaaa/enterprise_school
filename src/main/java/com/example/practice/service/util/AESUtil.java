@@ -1,4 +1,4 @@
-package com.bilibili.service.util;
+package com.example.practice.service.util;
 
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;

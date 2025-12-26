@@ -1,4 +1,4 @@
-package com.bilibili.service.config;
+package com.example.practice.service.config;
 
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;

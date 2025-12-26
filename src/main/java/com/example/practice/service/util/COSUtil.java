@@ -1,4 +1,4 @@
-package com.bilibili.service.util;
+package com.example.practice.service.util;
 
 import com.bilibili.dao.domain.exception.ConditionException;
 import com.bilibili.service.config.CosClientConfig;

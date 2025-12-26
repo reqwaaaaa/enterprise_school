@@ -1,4 +1,4 @@
-package com.bilibili.service.util;
+package com.example.practice.service.util;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.web.multipart.MultipartFile;

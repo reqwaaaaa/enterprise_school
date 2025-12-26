@@ -1,4 +1,4 @@
-package com.bilibili.service.util;
+package com.example.practice.service.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.bilibili.dao.domain.Danmu;

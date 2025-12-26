@@ -1,4 +1,4 @@
-package com.bilibili.service.config;
+package com.example.practice.service.config;
 
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;

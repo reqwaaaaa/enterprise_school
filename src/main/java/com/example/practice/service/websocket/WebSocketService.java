@@ -1,8 +1,7 @@
-package com.bilibili.service.websocket;
+package com.example.practice.service.websocket;
 
 import com.alibaba.fastjson.JSONObject;
 import com.bilibili.dao.domain.Danmu;
-import com.bilibili.dao.domain.constant.UserMomentsConstant;
 import com.bilibili.service.DanmuService;
 import com.bilibili.service.util.RocketMQUtil;
 import com.bilibili.service.util.TokenUtil;
@@ -98,7 +97,7 @@ public class WebSocketService {
                     JSONObject jsonObject = new JSONObject();
                     jsonObject.put("message",message);
                     jsonObject.put("sessionId",webSocketService.getSessionId());
-                    Message message1 = new Message(UserMomentsConstant.TOPIC_DANMUS,jsonObject.toJSONString().getBytes("UTF-8"));
+                    Message message1 = new Message(com.bilibili.dao.domain.constant.CourseInteractionConstant.TOPIC_DANMUS,jsonObject.toJSONString().getBytes("UTF-8"));
                     RocketMQUtil.asyncSendMsg(danmusProducer,message1);
                 }
                 if(this.userId !=null){

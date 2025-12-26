@@ -1,4 +1,4 @@
-package com.bilibili.service.util;
+package com.example.practice.service.util;
 
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;

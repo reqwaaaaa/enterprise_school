@@ -1,10 +1,9 @@
-package com.bilibili.service.config;
+package com.example.practice.service.config;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.bilibili.dao.domain.UserFollowing;
 import com.bilibili.dao.domain.UserMoments;
-import com.bilibili.dao.domain.constant.UserMomentsConstant;
 import com.bilibili.service.UserFollowingService;
 import com.bilibili.service.websocket.WebSocketService;
 import org.apache.commons.lang3.StringUtils;
@@ -24,9 +23,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 @Configuration
 public class RocketMQConfig {
 
@@ -43,7 +39,7 @@ public class RocketMQConfig {
     //用户动态生产者
     @Bean("momentsProducer")
     public DefaultMQProducer momentsProducer() throws MQClientException {
-        DefaultMQProducer producer = new DefaultMQProducer(UserMomentsConstant.GROUP_MOMENTS);
+        DefaultMQProducer producer = new DefaultMQProducer(com.bilibili.dao.domain.constant.CourseInteractionConstant.GROUP_MOMENTS);
         producer.setNamesrvAddr(nameServerAddr);
         producer.start();
         return producer;
@@ -52,10 +48,10 @@ public class RocketMQConfig {
     @Bean("momentsConsumer")
     public DefaultMQPushConsumer momentsConsumer() throws MQClientException {
 //        logger.debug("Configuring Moments Consumer...");
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(UserMomentsConstant.GROUP_MOMENTS);
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(com.bilibili.dao.domain.constant.CourseInteractionConstant.GROUP_MOMENTS);
         consumer.setNamesrvAddr(nameServerAddr);
         //订阅生产者
-        consumer.subscribe(UserMomentsConstant.TOPIC_MOMENTS,"*");
+        consumer.subscribe(com.bilibili.dao.domain.constant.CourseInteractionConstant.TOPIC_MOMENTS,"*");
         //添加监听器
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             @Override
@@ -90,7 +86,7 @@ public class RocketMQConfig {
 
     @Bean("danmusProducer")
     public DefaultMQProducer danmusProducer() throws MQClientException {
-        DefaultMQProducer producer = new DefaultMQProducer(UserMomentsConstant.GROUP_DANMUS);
+        DefaultMQProducer producer = new DefaultMQProducer(com.bilibili.dao.domain.constant.CourseInteractionConstant.GROUP_DANMUS);
         producer.setNamesrvAddr(nameServerAddr);
         producer.start();
         return producer;
@@ -98,10 +94,10 @@ public class RocketMQConfig {
 
     @Bean("danmusConsumer")
     public DefaultMQPushConsumer danmusConsumer() throws MQClientException {
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(UserMomentsConstant.GROUP_DANMUS);
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(com.bilibili.dao.domain.constant.CourseInteractionConstant.GROUP_DANMUS);
         consumer.setNamesrvAddr(nameServerAddr);
         //订阅生产者
-        consumer.subscribe(UserMomentsConstant.TOPIC_MOMENTS,"*");
+        consumer.subscribe(com.bilibili.dao.domain.constant.CourseInteractionConstant.TOPIC_MOMENTS,"*");
         //添加监听器
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             @Override

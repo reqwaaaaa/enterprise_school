@@ -1,4 +1,4 @@
-package com.bilibili.service.util;
+package com.example.practice.service.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

@@ -1,4 +1,4 @@
-package com.bilibili.service.util;
+package com.example.practice.service.util;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
