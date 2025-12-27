@@ -1,7 +1,7 @@
 package com.example.practice.service.util;
 
-import com.bilibili.dao.domain.exception.ConditionException;
-import com.bilibili.service.config.CosClientConfig;
+import com.example.practice.dao.common.exception.ConditionException;
+import com.example.practice.service.config.CosClientConfig;
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.exception.CosClientException;
 import com.qcloud.cos.http.HttpProtocol;
@@ -10,7 +10,7 @@ import com.qcloud.cos.transfer.TransferManager;
 import com.qcloud.cos.transfer.TransferManagerConfiguration;
 import com.qcloud.cos.transfer.Upload;
 import org.apache.commons.lang3.StringUtils;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;

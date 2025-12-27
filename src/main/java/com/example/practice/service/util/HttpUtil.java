@@ -2,7 +2,7 @@ package com.example.practice.service.util;
 
 import com.alibaba.fastjson.JSONObject;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;

@@ -22,10 +22,11 @@ redis:
 
 cos:
   client:
-    accessKey:
-    secretKey:
-    region:
-    bucket:
+    SecretId: AKIDqY5PXTDnAKI3a5OXWKvMZYLuISPAi3A4
+    SecretKey: jU1NWR8cM0To03wgHoERTJwLj4ED0e7M
+    region: ap-shanghai
+    bucket: school-enterprise-1393444897
+    url: https://school-enterprise-1393444897.cos.ap-shanghai.myqcloud.com/
 
 rocketmq:
   name-server: 127.0.0.1:9876

@@ -12,5 +12,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2025-12-24
  */
 public interface TCourseInteractionService extends IService<TCourseInteraction> {
-
+    void asyncAddInteraction(TCourseInteraction interaction);
+    void addToRedis(TCourseInteraction interaction);
 }
