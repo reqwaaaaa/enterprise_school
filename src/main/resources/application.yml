@@ -22,8 +22,8 @@ redis:
 
 cos:
   client:
-    SecretId: AKIDqY5PXTDnAKI3a5OXWKvMZYLuISPAi3A4
-    SecretKey: jU1NWR8cM0To03wgHoERTJwLj4ED0e7M
+    secretId: ${TENCENT_COS_SECRET_ID}   # 占位符
+    secretKey: ${TENCENT_COS_SECRET_KEY}
     region: ap-shanghai
     bucket: school-enterprise-1393444897
     url: https://school-enterprise-1393444897.cos.ap-shanghai.myqcloud.com/
