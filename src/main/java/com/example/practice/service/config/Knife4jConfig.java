@@ -1,34 +1,35 @@
 package com.example.practice.service.config;
 
+import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
+/**
+ * Knife4j + SpringDoc OpenAPI 配置
+ * 用于生成和管理 API 文档，支持 Knife4j 美化界面
+ */
 @Configuration
-@EnableSwagger2WebMvc
 public class Knife4jConfig {
 
-  @Bean(value = "dockerBean")
-  public Docket dockerBean() {
-    // 指定使用Swagger2规范
-    return new Docket(DocumentationType.SWAGGER_2)
-        .apiInfo(new ApiInfoBuilder()
-                     // 描述字段支持Markdown语法
-                     .description("# Ailiaili Api")
-                     .title("Ailiaili Api")
-                     .version("1.0")
-                     .build())
-        // 分组名称
-        .groupName("ailiaili")
-        .select()
-        // 这里指定Controller扫描包路径
-        .apis(RequestHandlerSelectors.basePackage("com.bilibili.api"))
-        .paths(PathSelectors.any())
-        .build();
+  @Bean
+  public GroupedOpenApi schoolEnterpriseApi() {
+    return GroupedOpenApi.builder()
+            // 分组名称（在 Knife4j 界面显示）
+            .group("校企慧平台")
+            // 扫描的 Controller 包路径（请根据实际项目调整）
+            .packagesToScan("com.example.practice.controller")
+            // 扫描的路径（通常全部）
+            .pathsToMatch("/**")
+            .build();
   }
+
+  // 可选：如果项目有多个模块，可以再定义其他分组
+  // @Bean
+  // public GroupedOpenApi adminApi() {
+  //     return GroupedOpenApi.builder()
+  //             .group("后台管理")
+  //             .packagesToScan("com.example.practice.admin.controller")
+  //             .pathsToMatch("/admin/**")
+  //             .build();
+  // }
 }

@@ -35,3 +35,13 @@ rocketmq:
 
 elasticsearch:
   url: 127.0.0.1:9200
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: order
+  api-docs:
+    path: /v3/api-docs
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
