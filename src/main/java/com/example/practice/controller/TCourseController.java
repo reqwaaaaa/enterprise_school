@@ -18,7 +18,7 @@ import java.util.List;
 @Tag(name = "课程管理")
 @RestController
 @RequestMapping("/course")
-public class CourseController {
+public class TCourseController {
 
     @Autowired
     private TCourseService tCourseService;

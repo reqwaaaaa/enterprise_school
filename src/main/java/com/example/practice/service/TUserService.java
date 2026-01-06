@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.practice.entity.TUser;
 import com.example.practice.entity.TUserInfo;
 
+import java.util.List;
+
 /**
  * <p>
  * 用户表 - 统一用户管理系统 服务类

@@ -19,7 +19,7 @@ import java.util.List;
 @Tag(name = "用户管理")
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class TUserController {
 
     @Autowired
     private TUserService tUserService;

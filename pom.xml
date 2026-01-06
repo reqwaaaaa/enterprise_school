@@ -40,6 +40,20 @@
             <version>3.5.7</version>
         </dependency>
 
+        <!-- 新增：MyBatis-Plus 代码生成器核心依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+        <!-- 新增：Freemarker 模板引擎（FastAutoGenerator + FreemarkerTemplateEngine 必须依赖） -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+
         <!-- MySQL -->
         <dependency>
             <groupId>com.mysql</groupId>
